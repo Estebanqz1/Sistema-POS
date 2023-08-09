@@ -6,7 +6,7 @@ using POS.Infrastructure.Commons.Bases.Response;
 
 namespace POS.Application.Interfaces
 {
-    internal interface ICategoryApplication
+    public interface ICategoryApplication
     {
         Task<BaseResponse<BaseEntityResponse<CategoryResponseDto>>> ListCategories(BaseFiltersRequest filters);
         Task<BaseResponse<IEnumerable<CategorySelectResponseDto>>> ListSelectCategories();
