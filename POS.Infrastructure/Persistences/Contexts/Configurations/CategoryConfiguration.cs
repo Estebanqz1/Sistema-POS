@@ -6,16 +6,14 @@ namespace POS.Infrastructure.Persistences.Contexts.Configurations
 {
     public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     {
-        #region Propiedades
-        #endregion
 
-        #region Constructror
-        #endregion
-
-        #region Metodos
-        #endregion
         public void Configure(EntityTypeBuilder<Category> builder)
         {
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Id)
+                .HasColumnName("CategoryId");
+
             builder.Property(e => e.Name).HasMaxLength(100);
         }
     }
