@@ -45,14 +45,14 @@ namespace POS.Api.Controllers
             return Ok(response);
         }
 
-        [HttpPut("Edit/{categoryId:int]")]
+        [HttpPut("Edit/{categoryId:int}")]
         public async Task<IActionResult> EditCategory(int categoryId, [FromBody] CategoryRequestDto requestDto)
         {
             var response = await _categoryApplication.EditCategory(categoryId, requestDto);
             return Ok(response);
         }
 
-        [HttpPut("Remove/{categoryId:int]")]
+        [HttpPut("Remove/{categoryId:int}")]
         public async Task<IActionResult> RemoveCategory(int categoryId)
         {
             var response = await _categoryApplication.RemoveCategory(categoryId);

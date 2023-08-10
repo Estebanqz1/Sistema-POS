@@ -40,7 +40,7 @@ namespace POS.Infrastructure.Persistences.Repositories
                 categories = categories.Where(x => x.State.Equals(filters.StateFilter));
             }
 
-            if (!string.IsNullOrEmpty(filters.TextFilter) && !string.IsNullOrEmpty(filters.EndDate)) 
+            if (!string.IsNullOrEmpty(filters.StartDate) && !string.IsNullOrEmpty(filters.EndDate)) 
             {
                 categories = categories.Where(x => x.AuditCreateDate >= Convert.ToDateTime(filters.StartDate) && x.AuditCreateDate <= Convert.ToDateTime(filters.EndDate).AddDays(1));
             }
